@@ -1,0 +1,83 @@
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.my_body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    display: flex;
+    white-space: nowrap;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    margin: 0;
+    background-color: #333;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+}
+
+.split.left {
+    background-image: url('images/First_image.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    opacity: 0.9;
+}
+
+.split.right {
+    background-image: url('images/contact-us-flatlay.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    float: right;
+    position: relative;
+    opacity: 0.9;
+}
+
+.split.left:hover, .split.right:hover {
+    width: 125%;
+    transition:all 2s ease-in-out;
+    opacity: 1;
+}
+
+.btn {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1.2em;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.btn:hover {
+    background-color: steelblue;
+}
+
+.split a {
+    text-decoration: none;
+}
