@@ -1,0 +1,686 @@
+body {
+	font-family: "Poppin", sans-serif;
+	background-color: #2e3537;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.book {
+	width: 420px;
+	height: 530px;
+	position: relative;
+	transition-duration: 1.5s;
+	perspective: 1500;
+}
+
+input {
+	display: none;
+
+}
+.cover, .back-cover {
+	background-color: seagreen;
+	width: 100%;
+	height: 100%;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 0 5px rgb(41, 41, 41);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center left;
+}
+
+.cover {
+	position: absolute;
+	z-index: 20;
+	transition: transform 1s;
+	background-color: seagreen;
+}
+
+
+label {
+	font-size: 20px;
+}
+
+.cover label {
+	width: 95%;
+	height: 95%;
+	cursor: pointer;
+	z-index: 100;
+
+	position: absolute;
+	left: 0;
+}
+
+.back-cover div {
+    width: 95%;
+	height: 95%;
+	cursor: pointer;
+
+	position: absolute;
+	left: 0;
+}
+
+
+.back-cover {
+	position: relative;
+	z-index: -1;
+}
+.page {
+	position: absolute;
+	background-color: white;
+	width: 400px;
+	height: 510px;
+	border-radius: 0 15px 15px 0;
+	margin-top: 10px;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition-duration: 1.5s;
+}
+.page img {
+	/* width: 100%;
+	height: 100%; */
+	border-radius: 15px 0 0 15px;
+
+	width: 75%;
+	height: 65%;
+}
+.front-page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	box-sizing: border-box;
+	padding: 1rem;
+
+	background-color: #fff;
+}
+.back-page {
+	transform: rotateY(180deg);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	z-index: 99;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #fff;
+}
+.next, .prev {
+	position: absolute;
+	bottom: 1em;
+	cursor: pointer;
+}
+.next {
+	right: 1em;
+}
+.prev {
+	left: 1em;
+}
+
+#page1 {
+	z-index: 12;
+}
+#page2 {
+	z-index: 11;
+}
+#page3 {
+	z-index: 10;
+}
+
+#page4 {
+	z-index: 9;
+}
+
+#page5 {
+	z-index: 8;
+}
+
+#page6 {
+	z-index: 7;
+}
+
+#page7 {
+	z-index: 6;
+}
+
+#page8 {
+	z-index: 5;
+}
+
+#page9 {
+	z-index: 4;
+}
+
+#page10 {
+	z-index: 3;
+}
+
+#page11 {
+	z-index: 2;
+}
+
+#page12 {
+	z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book {
+	transform: translateX(200px);
+}
+#checkbox-cover:checked ~ .book .cover,#checkbox-cover:checked ~ .book #page1   {
+	transition: transform 1.5s, z-index 0.5s 0.5s;
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+
+#checkbox-cover:checked ~ .book #page1 {
+	transition: all 2s;
+}
+#checkbox-cover:checked ~ .book .page {
+	box-shadow: 0 0 3px rgb(99, 98, 98);
+}
+
+/* #checkbox-page1:checked ~ .book #page1 {
+	transform: rotateY(-180deg);
+	z-index: 2;
+} */
+
+#checkbox-page2:checked ~ .book #page2 {
+	/* transform: rotateY(-180deg);*/ transform: rotateY(-178deg);
+	z-index: 3;
+}
+
+#checkbox-page3:checked ~ .book #page3 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-176deg);
+	z-index: 4;
+}
+
+#checkbox-page4:checked ~ .book #page4 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-174deg);
+	z-index: 5;
+}
+
+#checkbox-page5:checked ~ .book #page5 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-172deg);
+	z-index: 6;
+}
+
+#checkbox-page6:checked ~ .book #page6 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-170deg);
+	z-index: 7;
+}
+
+#checkbox-page7:checked ~ .book #page7 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-168deg);
+	z-index: 8;
+}
+
+#checkbox-page8:checked ~ .book #page8 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-166deg);
+	z-index: 9;
+}
+
+#checkbox-page9:checked ~ .book #page9 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-164deg);
+	z-index: 10;
+}
+
+#checkbox-page10:checked ~ .book #page10 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-162deg);
+	z-index: 11;
+}
+
+#checkbox-page11:checked ~ .book #page11 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-160deg);
+	z-index: 12;
+}
+
+#checkbox-page12:checked ~ .book #page12 {
+	/* transform: rotateY(-180deg); */ transform: rotateY(-158deg);
+	z-index: 13;
+}
+
+
+
+/*********Individual Page moderation************/
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	box-sizing: border-box;
+}
+
+#page1 .front-page img {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    transform: translateX(-50%, -50%);
+    height: 100px;
+    width: 100px;
+
+}
+
+#page1 .front-page p {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 1.3em;
+    color: lightslategray;
+}
+
+#page .back-page img {
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+}
+
+#page2 .front-page img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#page3 ul.serviceOptions {
+   color: #333;
+   list-style: circle;
+   margin-left: 10%;
+}
+
+#page3 ul.serviceOptions li {
+   font-weight: 400;
+   line-height: 1.5;
+   font-size: 1.1em;
+}
+
+#page3 ul.serviceOptions li a {
+	text-decoration: none;
+	color: #17a2b8;
+}
+
+#page4 h2 {
+	color: seagreen;
+	margin-bottom: 15px;
+}
+
+#page4 .productTiles {
+	margin-top: 4%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+	position: fixed;
+	top: 25%;
+	left: 30%;
+}
+
+#page4 .productTiles div {
+	height: 70px;
+	width: 130px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border: 1px solid gray; */
+	border-radius: 10px;
+	margin-bottom: 10%;
+	background-color: seagreen;
+	color: #fff;
+	padding: 6px 12px;
+}
+
+#page4 .productTiles div:hover {
+    height: 80px;
+	width: 160px;
+	font-size: 1.1em;
+	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+	background-color: rgb(71, 133, 69);
+	color: white;
+	font-weight: bold;
+	transition: all 1s;
+}
+
+#page8 .back-page img {
+	height: 40%;
+}
+
+#page8 .front-page img, #page9 .front-page img  {
+	margin-top: -10%;
+}
+
+/****End of individual page modaration****/
+
+.page .back-page img, .page .front-page img {
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.page .back-page span {
+	color: #10b3f0;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.page .back-page h2 {
+	color: seagreen;
+    font-weight: bold;
+
+	position: absolute;
+	top: 30px;
+	left: 20px;
+}
+
+.page .front-page span {
+	color: #10b3f0;
+}
+
+.page .front-page h2 {
+	color: seagreen;
+    font-weight: bold;
+
+	position: absolute;
+	top: 30px;
+	left: 20px;
+
+}
+
+.page .front-page .frontPageImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 80%;
+	height: 70%;
+	margin-left: 8%;
+
+	position: absolute;
+	top: 18%;
+}
+
+.page .front-page .frontPageImage img {
+	width: 90%;
+}
+
+.clientsImage {
+	height: 80%;
+	width: 100%;
+	padding: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	position: fixed;
+	top: 10%;
+	left: 1%;
+	/* column-count: 2; */
+}
+
+.clientsImage div {
+	max-width: 42%;
+	height: 30%;
+	border: 1px solid #f0f0f0;
+	padding: 3% 9%;
+	margin: 3% 4%;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.clientsImage div img {
+    width: 100%;
+	height: 100%;
+}
+
+#clientTitle {
+	color: seagreen;
+	font-weight: bold;
+	font-size: 1.2em;
+	position: absolute;
+	left: 4%;
+	top: 3%;
+}
+
+#floatingTile {
+	position: absolute;
+	bottom: 10%;
+	left: 17%;
+	height: 14%;
+	width: 60%;
+	padding: 8px 18px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	/* background-color: #f2555b5c; */
+	animation: shake_left_diagonal 3s infinite;
+
+	background-color: #f2555a7e;
+}
+
+
+
+/***** Add animation part ****/
+
+
+.book div:nth-child(3)  .back-page img {
+	animation: shake 2s infinite;
+}
+
+.book div:nth-child(4)  .back-page img {
+	animation: shake 2s infinite;
+}
+
+.book div:nth-child(5)  .back-page img {
+	animation: shake 2s infinite;
+}
+
+.book div:nth-child(11)  .back-page img {
+	animation: shake 2s infinite;
+}
+
+
+#animate_background {
+	z-index: 550;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: -3%;
+	left: -96%;
+	margin-left: -100%;
+	/* overflow: hidden; */
+}
+
+#animate_background img {
+	height: 40px;
+	width: 40px;
+	z-index: -50;
+	opacity: 0.4;
+}
+
+#animate_background img:nth-child(1) {
+    animation: shake 3s infinite;
+	position: absolute;
+	bottom: 17%;
+	left: 122%;
+	/* opacity: 0.6; */
+}
+
+#animate_background img:nth-child(2) {
+    animation: shake 3s infinite;
+	position: absolute;
+	bottom: 10%;
+	right: -75%;
+}
+
+ #animate_background img:nth-child(3) {
+    animation: shake_left_diagonal 3s infinite;
+	position: absolute;
+	right: 20%;
+	top: 30%;
+}
+
+ #animate_background img:nth-child(4) {
+    animation: circular_rotate 3s infinite;
+	position: absolute;
+	left: 115%;
+	top: 19%;
+}
+
+#animate_background img:nth-child(5) {
+    animation:  shake_left_diagonal 3s infinite;
+	position: absolute;
+	bottom: 30%;
+	left: 130%;
+}
+
+
+
+#animate_background img:nth-child(6) {
+    animation: shake 3s infinite;
+	position: absolute;
+	bottom: 7%;
+	left: 317%;
+}
+
+#animate_background img:nth-child(7) {
+    animation: shake 3s infinite;
+	position: absolute;
+	bottom: 15%;
+	right: -278%;
+}
+
+ #animate_background img:nth-child(8) {
+    animation: shake_left_diagonal 3s infinite;
+	position: absolute;
+	left: 325%;
+	top: 25%;
+}
+
+ #animate_background img:nth-child(9) {
+    animation: shake_left_diagonal 3s infinite;
+	position: absolute;
+	right: -279%;
+	top: 30%;
+}
+
+#animate_background img:nth-child(10) {
+    animation: shake 3s infinite;
+	position: absolute;
+	right: -290%;
+	top: 50%;
+}
+
+#animate_background img:nth-child(11) {
+    animation: shake 3s infinite;
+	position: absolute;
+	right: -86%;
+	top: 11%;
+}
+
+#animate_background img:nth-child(12) {
+    animation: circular_rotate 3s infinite;
+	position: absolute;
+	right: 20%;
+	top: 85%;
+}
+
+
+#animate_background img:nth-child(13) {
+    animation: shake 3s infinite;
+	position: absolute;
+	right: 36%;
+	top: 52%;
+}
+
+#animate_background img:nth-child(14) {
+    animation: shake_left_diagonal 3s infinite;
+	position: absolute;
+	right: 40%;
+	top: -5%;
+}
+
+#animate_background img:nth-child(15) {
+    animation: circular_rotate 3s infinite;
+	position: absolute;
+	left: 335%;
+	top: -5%;
+}
+
+#animate_background img:nth-child(16) {
+    animation: shake 3s infinite;
+	position: absolute;
+	left: 310%;
+	bottom: 35%;
+}
+
+#animate_background img:nth-child(17) {
+    animation: shake 3s infinite;
+	position: absolute;
+	right: -60%;
+	top: -7%;
+}
+
+
+
+
+/*****End of Add animation part ****/
+
+
+
+
+/** Image animation **/
+
+/* img {
+	animation: shake 2s infinite;
+	
+  } */
+  
+  @keyframes shake {
+	0% { transform: translate(0px, 0px); }
+	10% { transform: translate(0px, -2px) ; }
+	20% { transform: translate(0px, -4px); }
+	30% { transform: translate(0px, -6px) ; }
+	40% { transform: translate(0px, -4px) ; }
+	50% { transform: translate(0px, -2px) ; }
+	60% { transform: translate(0px, 0px);  }
+	70% { transform: translate(0px, 2px) ; }
+	80% { transform: translate(0px, 4px) ; }
+	90% { transform: translate(0px, 6px) ; } 
+	100% { transform: translate(0px, 4px) ; }
+  }
+
+  @keyframes circular_rotate {
+	0% { transform:   rotate(0deg); }
+	10% { transform:  rotate(36deg); }
+	20% { transform:  rotate(72deg); }
+	30% { transform:  rotate(108deg); }
+	40% { transform:  rotate(144deg); }
+	50% { transform:  rotate(180deg); }
+	60% { transform:  rotate(216deg); }
+	70% { transform:  rotate(252deg); }
+	80% { transform:  rotate(288deg); }
+	90% { transform:  rotate(324deg); }
+	100% { transform: rotate(360deg); }
+  }
+
+  @keyframes shake_left_diagonal {
+	0% { transform: translate(1px, 1px) ; }
+	10% { transform: translate(-1px, -1px); }
+	20% { transform: translate(-2px, -2px); }
+	30% { transform: translate(-3px, -3px) ; }
+	40% { transform: translate(-4px, -4px) ; }
+	50% { transform: translate(-3px, -3px) ; }
+	60% { transform: translate(-2px, -2px) ; }
+	70% { transform: translate(-1px, -1px) ; }
+	80% { transform: translate(0px, 0px) ; }
+	90% { transform: translate(1px, 1px); }
+	100% { transform: translate(2px, 2px); }
+  }
+
+
+
+/*** For media Queries *****/
+
