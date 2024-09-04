@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.circle_container {
+    width: 150px;
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+    transform-origin: center;
+}
+
+
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: steelblue;
+    /* border: 2px solid #333; */
+    transition: all 3s ease-in-out;
+    transform: translate(-400px, -400px);
+    /* margin-left: 3px; */
+    
+}
+
+.circle_container .circle:nth-child(1) {
+    right: 5%;
+    top: 46%;
+}
+
+.circle_container .circle:nth-child(2) {
+    right: 15%;
+    top: 46%;
+}
+
+.circle_container .circle:nth-child(3) {
+    right: 25%;
+    top: 46%;
+}
+
+.circle_container .circle:nth-child(4) {
+    right: 35%;
+    top: 46%;
+}
+
+.circle_container .circle:nth-child(5) {
+    right: 45%;
+    top: 46%;
+}
+
+.circle_container .circle:nth-child(6) {
+    right: 55%;
+    top: 46%;
+}
+
+
+
+.circle_container .circle:nth-child(7) {
+    right: 10%;
+    top: 36%;
+}
+
+.circle_container .circle:nth-child(8) {
+    right: 15%;
+    top: 26%;
+}
+
+.circle_container .circle:nth-child(9) {
+    right: 10%;
+    top: 56%;
+}
+
+.circle_container .circle:nth-child(10) {
+    right: 15%;
+    top: 66%;
+}
+
+
+
+.container .circle_container:nth-child(3) {
+    position: absolute;
+    top: 57%;
+    left: 45%;
+}
+
+.container .circle_container:nth-child(3) .circle {
+    background-color: #fba55a;
+}
+
+.container .circle_container:nth-child(4) {
+    position: absolute;
+    top: 30%;
+    left: 45.2%;
+}
+
+.container .circle_container:nth-child(4) .circle {
+    background-color: #e41b23;
+}
+
+
+.container .circle_container:nth-child(1) .circle {
+    background-color: #19b2dc;
+}
+
+.container .circle_container:nth-child(2) .circle {
+    background-color: #9bce4f;
+}
+
+/* Arrow end here*/
+
+.writtenSoft {
+    width: 18rem;
+    height: 10rem;
+
+    position: absolute;
+    top: 38%;
+    left: 58%;
+
+    transform: translate(-400px, -400px);
+}
+
+.writtenSoft img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+
+/* Dialogue Part*/
+
+.softbdDialogue {
+    width: 30rem;
+    height: 20rem;
+
+    position: absolute;
+    top: 60%;
+    left: 34%;
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: 1.6em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.softbdDialogue span:nth-child(4), .softbdDialogue span:nth-child(9) {
+    font-style: italic;
+    color: #19b2dc;
+}
+
+/* .softbdDialogue #firstrow span {
+    transform: translate(-500px, -500px);
+} */
+
+.softbdDialogue div>span {
+    display: inline-block;
+    transform: translate(-1300px, -1000px);
+    transition: all 3s ease-in-out;
+}
+
