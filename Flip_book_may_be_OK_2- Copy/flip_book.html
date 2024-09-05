@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip book on click</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Arrow_Practice_3/style_practice_2.css">
+
+    <script src="https://kit.fontawesome.com/1cad54f882.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src= 
+    "https://code.jquery.com/jquery-3.6.0.min.js"> 
+        </script> 
+</head>
+
+
+<body>
+ 
+    <input type="checkbox" id="checkbox-cover">
+    <!-- <input type="checkbox" id="checkbox-page1"> -->
+    <input type="checkbox" id="checkbox-page2">
+    <input type="checkbox" id="checkbox-page3">
+    <input type="checkbox" id="checkbox-page4">
+    <input type="checkbox" id="checkbox-page5">
+    <input type="checkbox" id="checkbox-page6">
+    <input type="checkbox" id="checkbox-page7">
+    <input type="checkbox" id="checkbox-page8">
+    <input type="checkbox" id="checkbox-page9">
+    <input type="checkbox" id="checkbox-page10">
+    <input type="checkbox" id="checkbox-page11">
+    <input type="checkbox" id="checkbox-page12">
+
+    <input type="checkbox" id="checkbox-backAll">
+
+    <div class="book" >
+        <div id="animate_background">
+            <img src="images/Different shape image/code-solid.png" alt="">
+            <img src="images/Different shape image/circle-regular.png" alt="">
+            <img src="images/Different shape image/css3-alt-brands-solid.png" alt="">
+            <img src="images/Different shape image/clock-regular.png" alt="">
+            <img src="images/Different shape image/square-regular.png" alt="">
+
+            <img src="images/Different shape image/calendar-regular.png" alt="">
+            <img src="images/Different shape image/moon-regular.png" alt="">
+            <img src="images/Different shape image/flag-solid.png" alt="">
+            <img src="images/Different shape image/paper-plane-regular.png" alt="">
+            <img src="images/Different shape image/seedling-solid.png" alt="">
+            <img src="images/Different shape image/bell-regular.png" alt="">
+
+            <img src="images/Different shape image/moon-regular.png" alt="">
+            <img src="images/Different shape image/gift-solid.png" alt="">
+            <img src="images/Different shape image/leaf-solid.png" alt="">
+            <img src="images/Different shape image/snowflake-regular.png" alt="">
+            <img src="images/Different shape image/desktop-solid.png" alt="">
+            <img src="images/Different shape image/umbrella-solid.png" alt="">
+
+        </div>
+
+        <div class="cover" for="checkbox-cover" >
+            <!-- <img src="images/softBD_logo-removebg-preview.png" alt="" width="250" height="200" style="margin-left: 6%;"> -->
+            <div class="firstContainer">
+                <div class="container">
+                    <div class="circle_container">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    
+                    <div class="circle_container" style="transform: rotate(-180deg);">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+            
+                    <div class="circle_container" style="transform: rotate(-90deg);">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+            
+                    <div class="circle_container" style="transform: rotate(-270deg);">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            
+                <div class="writtenSoft">
+                    <img src="images/Croped_soft_bd_logo-removebg-preview.png" alt="">
+                </div>
+            
+                <div class="softbdDialogue">
+                   <div> <span>You</span> <span>have</span> <span>the</span> <span>Idea</span>  </div>
+                   <div> <span>We</span> <span>have</span> <span>the</span> <span>Technology</span> </div>
+                </div>
+            
+            </div>
+            
+            <label for="checkbox-cover"></label>
+        </div>
+
+        <div class="page" id="page1">
+            <div class="front-page">
+                <!-- <img src="images/softBD_logo-removebg-preview.png" alt="">
+                <p>You have the <b>Idea</b> <br> We have the <b>technology</b></p>
+                <label class="next" for="checkbox-page1"><i class="fas fa-chevron-right"></i></label> -->
+            </div>
+            <div class="back-page">
+                <img src="images/about_page_photo.png" >
+                <label class="prev" for="checkbox-cover"><i class="fas fa-chevron-left"></i></label>
+            </div>
+        </div>
+
+        <div class="page" id="page2">
+            <div class="front-page">
+                <!-- <h2>Page 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil magni laudantium beatae quia. Recusandae, fuga quas consectetur perferendis aperiam esse velit veniam ducimus? Quisquam consequatur perferendis quidem quia, recusandae ab!</p> -->
+                <img src="images/about_description-removebg.png" alt="" >
+
+
+                <label class="next" for="checkbox-page2"><i class="fas fa-chevron-right"></i></label>
+            </div>
+            <div class="back-page">
+                <img src="images/our_services.png">
+                <label class="prev" for="checkbox-page2"><i class="fas fa-chevron-left"></i></label>
+            </div>
+        </div>
+
+        <div class="page" id="page3">
+            <div class="front-page">
+                <span>WHAT WE DO</span>
+                <h3>Our Services</h3>
+                    <ul class="serviceOptions">
+                        <li> <a href="">Industrial solutions</a> </li>
+                        <li> <a href="">Custom Web Application</a> </li>
+                        <li> <a href="">Mobile Application</a> </li>
+                        <li> <a href="">e-Commerce</a> </li>
+                        <li> <a href="">CMS Solution</a> </li>
+                        <li> <a href="">Static/Dynamic Web site</a> </li>
+
+                        <li> <a href="">Affordable SEO</a> </li>
+                        <li> <a href="">Bulk SMS</a> </li>
+                        <li> <a href="">Corporate Email Services</a> </li>
+                        <li> <a href="">Digital/Social Marketing</a> </li>
+                        <li> <a href="">UX Design & Software Prototyping</a> </li>
+                    </ul>
+                     <label class="next" for="checkbox-page3"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <img src="images/Our-Products-removebg-preview.png">
+                <label class="prev" for="checkbox-page3"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <!--New-->
+
+        <div class="page" id="page4">
+            <div class="front-page">
+                <h2>Our Products Type</h2>
+                <div class="productTiles">
+                    <div>HR Management System</div>
+                    <div>Education Management System</div>
+                    <div>Kiosk Management System</div>
+                </div>
+                
+                  <label class="next" for="checkbox-page4"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <span>HRMS APPLICATION</span>
+                <h2>Pathao Ltd</h2>
+                <img src="images/HRMS_pathao.jpg">
+                <label class="prev" for="checkbox-page4"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page5">
+            <div class="front-page">
+                <span>HRMS APPLICATION</span>
+                <h2>East West Chemical Ltd</h2>
+                <div class="frontPageImage">
+                    <img src="images/HRMS_eastWestChemical-removebg-preview.png" alt="">
+                </div>
+
+                <div id="floatingTile">
+                    <p>Chemical Industry Website</p>
+                </div>
+
+                <label class="next" for="checkbox-page5"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <span>HRMS APPLICATION</span>
+                <h2>Shetu Corporation</h2>
+                <img src="images/HRMS_shetu_corporation.jpg">
+                <label class="prev" for="checkbox-page5"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page6">
+            <div class="front-page">
+                <span>HRMS APPLICATION</span>
+                <h2>Malik Seeds</h2>
+                <div class="frontPageImage">
+                    <img src="images/HRMS_malik_seeds.jpg" alt="">
+                </div>
+                
+                <div id="floatingTile">
+                    <p>Agriculture Application</p>
+                </div>
+                    <label class="next" for="checkbox-page6"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <span>EMS APPLICATION</span>
+                <h2>East West University</h2>
+                <img src="images/EMS_ewu.jpg">
+                <label class="prev" for="checkbox-page6"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page7">
+            <div class="front-page">
+                <span>EMS APPLICATION</span>
+                <h2>BAF Shaheen College</h2>
+                <div class="frontPageImage">
+                    <img src="images/EMS_BAF_Shaheen.jpg" alt="">
+                </div>
+
+                <div id="floatingTile">
+                    <p>Educational Institution</p>
+                </div>
+                
+                  <label class="next" for="checkbox-page7"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <span>EMS APPLICATION</span>
+                <h2>Govt. City College, Chittagong</h2>
+                <img src="images/EMS_govt_city_college.jpg">
+                <label class="prev" for="checkbox-page7"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page8">
+            <div class="front-page">
+                <span>KMS</span>
+                <h2>Land Ministry</h2>
+                <div class="frontPageImage">
+                    <img src="images/kiosk_land_ministry.png" alt="">
+                </div>
+
+                <div id="floatingTile">
+                    <p>Govt. Web Application</p>
+                </div>
+                
+                  <label class="next" for="checkbox-page8"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <span>AWARDS & ACHIEVEMENT</span>
+                <h2>Basis National ICT Award,2018</h2>
+                <img src="images/basis-national-ict-awards-2018.png">
+                <label class="prev" for="checkbox-page8"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page9">
+            <div class="front-page">
+                <span>AWARDS & ACHIEVEMENT</span>
+                <h2>APICTA Awards,China</h2>
+                <div class="frontPageImage">
+                    <img src="images/apicta_award_2018.jpg" alt="">
+                </div>
+
+                <div id="floatingTile">
+                    <p>GUANGZHOU, CHINA</p>
+                </div>
+                
+                  <label class="next" for="checkbox-page9"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <!-- <span>EMS APPLI</span>
+                <h2>Govt. City Coll</h2> -->
+                <img src="images/our-clients-icon-png.png">
+                <label class="prev" for="checkbox-page9"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page10">
+            <div class="front-page">
+                <!-- <span>Page 10</span> -->
+                <p id="clientTitle">Our Clients</p>
+                <div class="clientsImage">
+                    <div> <img src="images/client_ict_division.jpg" alt=""> </div>
+                    <div> <img src="images/client_social_division.jpg" alt=""> </div>
+                    <div> <img src="images/client_a2i.jpg" alt=""> </div>
+                    <div> <img src="images/client_UNDP.jpg" alt=""> </div>
+                </div>
+                
+                  <label class="next" for="checkbox-page10"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+
+                <p id="clientTitle">Our Clients</p>
+                <div class="clientsImage">
+                    <div> <img src="images/client_banglalink.jpg" alt=""> </div>
+                    <div> <img src="images/client_teletalk.png" alt=""> </div>
+                    <div> <img src="images/client_DMP.jpg" alt=""> </div>
+                    <div> <img src="images/client_LGED.jpg" alt=""> </div>
+                </div>
+
+                <label class="prev" for="checkbox-page10"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page11">
+            <div class="front-page">
+                <p id="clientTitle">Our Clients</p>
+                <div class="clientsImage">
+                    <div> <img src="images/client_land_record.jpg" alt=""> </div>
+                    <div> <img src="images/client_land_ministry.jpg" alt=""> </div>
+                    <div> <img src="images/client_food_ministry.jpg" alt=""> </div>
+                    <div> <img src="images/client_freedom_fighter_ministry.jpg" alt=""> </div>
+                </div>
+
+                  <label class="next" for="checkbox-page11"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <p id="clientTitle">Our Clients</p>
+                <div class="clientsImage">
+                    <div> <img src="images/client_women_directorates.jpg" alt=""> </div>
+                    <div> <img src="images/client_youth_directorates.jpg" alt=""> </div>
+                    <div> <img src="images/client_jaago.png" alt=""> </div>
+                    <div> <img src="images/client_OkPapa.jpg" alt=""> </div>
+                </div>
+
+                <label class="prev" for="checkbox-page11"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+        <div class="page" id="page12">
+            <div class="front-page">
+                <p id="clientTitle">Our Clients</p>
+                <div class="clientsImage">
+                    <div> <img src="images/client_bepza.jpg" alt=""> </div>
+                    <div> <img src="images/client_gp.jpg" alt=""> </div>
+                    <div> <img src="images/client_standard_chartered.jpg" alt=""> </div>
+                    <div> <img src="images/client_BIFFL.jpg" alt=""> </div>
+                </div>
+                
+                  <label class="next" for="checkbox-page12"><i class="fas fa-chevron-right"></i></label>
+            </div>
+
+            <div class="back-page">
+                <p id="clientTitle">Our Clients</p>
+                <div class="clientsImage">
+                    <div> <img src="images/client_lakeshore_hotel.jpg" alt=""> </div>
+                    <div> <img src="images/client_robi.jpg" alt=""> </div>
+                </div>
+
+                <label class="prev" for="checkbox-page12"><i class="fas fa-chevron-left"></i></label>
+            </div>       
+        </div>
+
+
+
+        <div class="back-cover" >
+            <!-- <input type="button" value="Uncheck All" id="btnUncheckAll"> -->
+
+            <div value="Uncheck All" id="btnUncheckAll"></div>
+
+       </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="Arrow_Practice_3/practice_script.js"></script>
+</body>
+
+</html>
