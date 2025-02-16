@@ -5,3 +5,4 @@ Project live links:
 4. 3D rotating book gallery pure css : https://rokib-rotating-image-gallery.netlify.app/
 5. 3D Infinite Image Slider: https://spectacular-marzipan-11fc66.netlify.app/
 6. 3D Rotating Image Gallery with pure CSS: https://bespoke-gumdrop-97e11b.netlify.app/
+7. CSS Flip Book on click using html and css only: https://gleeful-phoenix-ea3a21.netlify.app/
