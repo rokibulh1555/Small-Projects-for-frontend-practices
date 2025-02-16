@@ -7,3 +7,8 @@ Project live links:
 6. 3D Rotating Image Gallery with pure CSS: https://bespoke-gumdrop-97e11b.netlify.app/
 7. CSS Flip Book on click using html and css only: https://gleeful-phoenix-ea3a21.netlify.app/
 8. Flip Book on click 3D: https://dancing-paletas-2d8d3e.netlify.app/
+9. Login form wave animation: https://exquisite-profiterole-1efa0e.netlify.app/
+10. Isometric menu hover effects: https://loquacious-manatee-cc6bdb.netlify.app/
+11. Marvel 3d carousel: https://gorgeous-sopapillas-e2dd47.netlify.app/
+12. Multiple Sticky Navigation Bar: https://ornate-chebakia-c85835.netlify.app/
+13. 
